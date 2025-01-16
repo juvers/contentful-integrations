@@ -1,5 +1,5 @@
 {
-  "name": "@allergan-data-labs/contentful-graphql",
+  "name": "@juvers/contentful-graphql",
   "version": "1.0.0",
   "main": "./index.js",
   "module": "./index.mjs",
@@ -10,7 +10,7 @@
       "require": "./index.js"
     }
   },
-  "repository": "https://github.com/allergan-data-labs/alle-frontend-shared-packages",
+  "repository": "https://github.com/juvers/contentful-integrations",
   "license": "UNLICENSED",
   "scripts": {
     "clean": "rm -rf dist coverage",
@@ -76,7 +76,7 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-web|@allergan-data-labs/universal-component-library|@allergan-data-labs/shared-sdk|react-native-iphone-x-helper|react-native-gesture-handler|@react-native-community|@react-navigation|react-native-color-picker|react-native-switch|react-native-modal-selector|react-native-modal-datetime-picker|react-native-modal|react-native-animatable|react-native-swipe-gestures|@okta/okta-react-native|react-native-reanimated|react-native-code-push|unimodules/*|react-native-webview|react-native-progress-wheel|react-native-htmlview|react-native-markdown-display|expo-local-authentication|@unimodules|expo-secure-store|@expo/html-elements|react-native-linear-gradient)/)"
+      "node_modules/(?!(react-native|react-native-web|react-native-iphone-x-helper|react-native-gesture-handler|@react-native-community|@react-navigation|react-native-color-picker|react-native-switch|react-native-modal-selector|react-native-modal-datetime-picker|react-native-modal|react-native-animatable|react-native-swipe-gestures|@okta/okta-react-native|react-native-reanimated|react-native-code-push|unimodules/*|react-native-webview|react-native-progress-wheel|react-native-htmlview|react-native-markdown-display|expo-local-authentication|@unimodules|expo-secure-store|@expo/html-elements|react-native-linear-gradient)/)"
     ],
     "moduleNameMapper": {
       "\\.css$": "<rootDir>/src/__mocks__/styleMock.ts"

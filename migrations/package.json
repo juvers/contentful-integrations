@@ -1,6 +1,6 @@
 {
-  "name": "@allergan-data-labs/contentful-migrations",
-  "author": "Robbie dela Victoria",
+  "name": "@juvers/contentful-migrations",
+  "author": "Jude Kuti",
   "module": "dist/contentful-migrations.esm.js",
   "version": "1.0.0",
   "license": "MIT",

@@ -4,7 +4,6 @@ module.exports = {
     es6: true,
   },
   extends: [
-    '@allergan-data-labs/eslint-config-alle',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
