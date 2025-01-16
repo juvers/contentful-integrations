@@ -1,0 +1,9 @@
+schema: https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}/environments/${CONTENTFUL_ENVIRONMENT}/?access_token=${CONTENTFUL_ACCESS_TOKEN}
+overwrite: true
+generates:
+  ./src/introspection-result.ts:
+    plugins:
+      - fragment-matcher
+  ./src/types.ts:
+    plugins:
+      - typescript

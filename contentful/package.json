@@ -1,0 +1,102 @@
+{
+  "name": "@allergan-data-labs/contentful-graphql",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "repository": "https://github.com/allergan-data-labs/alle-frontend-shared-packages",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "rm -rf dist coverage",
+    "coverage": "yarn test --coverage --coverageDirectory=../../coverage/packages/contentful-graphql",
+    "generate:types": "graphql-codegen -r dotenv/config",
+    "lint": "eslint --ext js,ts,tsx src --fix",
+    "test:clearCache": "jest --clearCache",
+    "test": "jest --env=jsdom --runInBand"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.8.0",
+    "@graphql-codegen/fragment-matcher": "^1.8.0",
+    "@graphql-codegen/typescript": "^2.0.0",
+    "@okta/okta-auth-js": "4.0.2",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "14.0.0",
+    "@types/jest": "27.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "@nx/js": "18.3.1",
+    "@nx/vite": "16.10.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "intersection-observer": "0.12.0",
+    "jest": "27.5.1",
+    "jest-fetch-mock": "3.0.3",
+    "metro-babel-register": "0.73.10",
+    "prettier": "2.8.4",
+    "ts-jest": "27.1.5",
+    "tslib": "2.4.1",
+    "typescript": "4.9.4",
+    "vite": "~4.3.9",
+    "vite-plugin-dts": "~2.3.0"
+  },
+  "dependencies": {
+    "@apollo/react-common": "^3.1.2",
+    "@apollo/react-hooks": "3.1.5",
+    "@contentful/rich-text-types": "15.13.2",
+    "apollo-boost": "0.4.7",
+    "apollo-cache-inmemory": "^1.6.5",
+    "graphql-tag": "2.12.5",
+    "react-native": "0.71.11",
+    "react": "18.2.0",
+    "xstate": "4.17.1"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "setupFilesAfterEnv": [
+      "./src/setupTests.ts"
+    ],
+    "transform": {
+      "^.+\\.js$": "../../jest-preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|react-native-web|@allergan-data-labs/universal-component-library|@allergan-data-labs/shared-sdk|react-native-iphone-x-helper|react-native-gesture-handler|@react-native-community|@react-navigation|react-native-color-picker|react-native-switch|react-native-modal-selector|react-native-modal-datetime-picker|react-native-modal|react-native-animatable|react-native-swipe-gestures|@okta/okta-react-native|react-native-reanimated|react-native-code-push|unimodules/*|react-native-webview|react-native-progress-wheel|react-native-htmlview|react-native-markdown-display|expo-local-authentication|@unimodules|expo-secure-store|@expo/html-elements|react-native-linear-gradient)/)"
+    ],
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/src/__mocks__/styleMock.ts"
+    },
+    "coverageReporters": [
+      "json-summary",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,tsx,ts}",
+      "!src/**/*.stories.{js,jsx,tsx,ts}",
+      "!src/index.ts",
+      "!src/**/mockContentfulData.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 89,
+        "branches": 60,
+        "lines": 88
+      }
+    }
+  }
+}
